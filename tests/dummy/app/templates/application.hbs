@@ -1,0 +1,13 @@
+<h2 id="title">Welcome to Ember.js</h2>
+
+
+{{google-maps lat=lat lng=lng markers=markers zoom=zoom}}
+
+Lat: {{input value=lat}}, Lng: {{input value=lng}}
+Zoom: {{input value=zoom}}
+
+<hr>
+<h1>By user location</h1>
+{{google-maps currentLocation=true markers=markers zoom=7 width='90%' height='500px'}}
+
+{{outlet}}
