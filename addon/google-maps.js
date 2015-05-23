@@ -12,6 +12,7 @@ export default Em.Component.extend({
   markerCache: Em.A(),
   infoWindow: undefined,
   currentLocation: false,
+  scrollwheel: true,
   classNames: ['map-canvas'],
   attributeBindings: ['style'],
   width: '600px',
@@ -44,7 +45,8 @@ export default Em.Component.extend({
     var container = this.$();
     var options = {
       zoom: this.get('zoom'),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: this.get('scrollwheel')
     };
 
     this.getLocation().then(function(pos) {
